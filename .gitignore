@@ -1,0 +1,36 @@
+# Eclipse cache files #
+#######################
+.project
+.settings
+**/.settings
+**/.project
+**/.classpath
+*.derivated
+
+# IDEA Intellij #
+#################
+.idea
+*.iml
+*/*.iml
+
+# Generated files #
+###################
+*/compil.txt
+target
+**/test-output
+**/target
+**/out.txt
+**/.hibernateSynchronizer3
+**/pom.xml.versionsBackup
+
+# Logs and databases #
+######################
+*.log
+*.logs
+
+# OS generated files #
+######################
+Thumbs.db
+
+*.classpath
+**/dependency-reduced-pom.xml
