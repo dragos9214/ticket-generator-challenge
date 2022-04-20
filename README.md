@@ -22,7 +22,7 @@ The recommended time is less than 1s (with a lightweight random implementation)
 
 **Implementation:**
 
-###Classes:
+### Classes:
  - [Strip](src/main/java/com/lindar/bingo/generator/Strip.java) class consists of:
    - An ArrayList of 6 Ticket objects used for storing the tickets;
    - An integer id used for a cooler output.
@@ -39,7 +39,7 @@ The recommended time is less than 1s (with a lightweight random implementation)
  - [RandomUtil](src/main/java/com/lindar/bingo/generator/RandomUtil.java) class has no fields.
  - [Challenge](src/main/java/com/lindar/bingo/Challenge.java) class has no fields.
  
-###Algorithm:
+### Algorithm:
 
 The algorithm consists of two main phases:
  - Distribution of values 1 to 90 randomly in a [DistributedValueSet](src/main/java/com/lindar/bingo/generator/DistributedValueSet.java) instance. A [DistributedValueSet](src/main/java/com/lindar/bingo/generator/DistributedValueSet.java) is created using the factory static method *generateRandomValueSet()*. The factory method creates an instance of [NumberFeed](src/main/java/com/lindar/bingo/generator/DistributedValueSet.java) used to ensure all 90 values are allocated to the DistributionValueSet and the resulting DistributionValueSet goes as follows:
@@ -64,11 +64,11 @@ The algorithm consists of two main phases:
 
    After all tickets were populated the algorithm make sure the tickets columns are sorted ascending.
 
-###How to use:
+### How to use:
 The CLI is "minimalist", it expects a single argument, an integer greater than 0 representing the number of strips to be generated and printed.  
 Running the program without arguments fallbacks to generating the default 10.000 strips.
 
-###Tests:
+### Tests:
 The tests can be found [here](src/test/java/com/lindar/bingo/generator/StripGeneratorTest.java)
 
 A set of 10.000 strips is generated before test execution. The time needed to generate the 10.000 strips is recorded in ms.
@@ -84,7 +84,7 @@ What tests cover:
 
 ***The above tests are validated against all 10.000 strips.***
 
-###Other facts
+### Other facts
 There are two methods in the StripGenerator capable of generating strips:
  - *asyncGenerateMultiple(int count)* : generates the strips using a parallel stream
  - *syncGenerateMultiple(int count)* : generates the strips using a single stream 
